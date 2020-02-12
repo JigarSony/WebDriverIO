@@ -24,6 +24,18 @@ class BlazePage{
         })
     }
 
+    //6th getter and non getter method
+    //get specifChildElement(index){ -- it will give error getter have no params
+    //remove get and run it will work
+     specifChildElement(index){
+        //return this.parent.$('li:nth-child(${index})')
+        return this.parent.$(`li:nth-child(${index})`)
+    }
+
+    getspecifChildElementText(index){
+        console.log(this.specifChildElement(index).getText());
+    }
+
 }
 
 module.exports = new BlazePage();
